@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ctrl-p search</title>
+    <script type="text/javascript" src="jQuery-2.0.3.js"></script>
+    <script type="text/javascript" src="fuse.min.js"></script>
+    <style>
+      html, body {
+        width: 600px;
+        height: 300px;
+        padding: 3px;
+        margin: 0px;
+        background-color: #444444;
+        color: #c8c8c8;
+      }
+
+      input {
+        width: 590px;
+        padding: 0px;
+        margin: 0px;
+        height: 28px;
+        background-color: #e6e6e6;
+        color: black;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+        height: 300px;
+        width: 593px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+       
+      ::-webkit-scrollbar {
+          width: 16px;
+      }
+       
+      ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 10px 0px 20px rgba(15,15,15,1); 
+      }
+       
+      ::-webkit-scrollbar-thumb {
+        background-color: #404040;
+        border: 3px solid transparent;
+        border-radius: 9px;
+        background-clip: content-box;
+      }
+
+      li {
+        display: block;
+        font: 100 12px/1.4 Helvetica, Verdana, sans-serif;
+        border-bottom: 2px groove rgba(120, 120, 120, .5);
+        padding: 4px;
+        padding-left: 45px;
+      }
+
+      li span {
+        color: #eee;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      li:first-child {
+        border-top: 2px groove rgba(120, 120, 120, .5);
+      }
+       
+      li:last-child {
+        border: none;
+      }
+       
+      li.selected {
+        background: #606060;
+      }
+
+      .tab {
+        background-color: #404040;
+      }
+
+      .history {
+        background-color: #446484;
+      }
+
+      .bookmark {
+        background-color: #5C5630;
+      }
+    </style>
+    <script src="tabwindow.js"></script>
+  </head>
+  <body>
+    <input type="text" id="searchFilter" placeholder="Search..." autofocus />
+    <ul id="searchResults"></ul>
+  </body>
+</html>
+
